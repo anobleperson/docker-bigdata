@@ -13,3 +13,9 @@ As written in the blazedgraph wiki:
 You should specify JAVA_OPTS with at least the following properties. The guidelines for the maximum java heap size are no more than 1/2 of the available RAM. Heap sizes of 2G to 8G are good recommended to avoid long GC pauses. Larger heaps are possible with the G1 collector (in Java 7).
 
 export JAVA_OPTS="-server -Xmx2g"
+
+Setup users as per: https://registry.hub.docker.com/_/tomcat/
+> cp tomcat-users.xml $HOME/tomcat/tomcat-users.xml
+> cp web.xml $HOME/tomcat/web.xml
+> sudo docker run -v $HOME/tomcat/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml:ro -v $HOME/tomcat/web.xml:/usr/local/tomcat/conf/web.xml:ro ...
+ 
