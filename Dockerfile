@@ -8,7 +8,7 @@ WORKDIR /
 RUN mkdir /bigdata
 
 WORKDIR /bigdata
-RUN wget http://sourceforge.net/projects/bigdata/files/bigdata/1.5.0/bigdata.war
+RUN wget http://sourceforge.net/projects/bigdata/files/bigdata/1.5.1/bigdata.war
 
 WORKDIR /
 ADD run.sh /run.sh
